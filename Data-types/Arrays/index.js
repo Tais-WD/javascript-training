@@ -9,14 +9,21 @@ let array = [];
 function sumInput() {
   let input;
 
-  do {
-    input = +prompt("Add number", "");
+  while (true) {
+    input = prompt("Add number", "");
+    if (input == "" || input == null || !isFinite(input)) {
+      break;
+    }
 
-    array.push(input);
+    array.push(parseInt(input));
 
-    console.log(input);
     console.log(array);
-  } while (typeof input.isNaN == false || input != null);
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+      sum = sum + array[i];
+      console.log(sum);
+    }
+  }
 }
 
 sumInput();
