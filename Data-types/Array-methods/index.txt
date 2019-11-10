@@ -1,0 +1,1 @@
+1. in index5.js the arrow function interesting syntax
